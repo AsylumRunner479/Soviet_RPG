@@ -19,8 +19,8 @@ EditorBuildSettings:
     guid: f807a428bc79ee64b84ff8653e67744a
   - enabled: 1
     path: Assets/Scenes/Plant.unity
-    guid: d917d609d56607f4ea1e87e4b1436dfd
+    guid: 1838bd8bf3bf35e4d8b118fb460f8ded
   - enabled: 1
     path: Assets/Scenes/Board.unity
-    guid: f5015c4d854a2c74897a0db64df1a57a
+    guid: f6e4e0e32450d9645bf6776f55f7dc8b
   m_configObjects: {}
