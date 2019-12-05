@@ -54,6 +54,10 @@ public class Plant_Selector : MonoBehaviour
 
     }
 
+    //plan is too hit previous character on selection screen, 
+    //current character is gameobject.set active false 
+    //and previous character is enabled
+
     public void PreviousPlant()
     {
         switch (CharacterInt)
