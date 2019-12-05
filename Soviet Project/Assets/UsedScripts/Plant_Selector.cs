@@ -12,8 +12,8 @@ public class Plant_Selector : MonoBehaviour
 
 
    private Vector3 PlantPosition;
-   private Vector3 Offscreenplant;
 
+    [SerializeField]
     private int CharacterInt = 1;
 
     //plan is too hit next character, 
@@ -24,7 +24,6 @@ public class Plant_Selector : MonoBehaviour
     private void Awake()
     {
         PlantPosition = Plant1.transform.position;
-        Offscreenplant = Plant2.transform.position;
     }
 
     public void NextPlant()
@@ -60,10 +59,19 @@ public class Plant_Selector : MonoBehaviour
         switch (CharacterInt)
         {
             case 1:
+                Plant3.gameObject.SetActive(true);
+                Plant1.gameObject.SetActive(false);
+                ResetPlantInt();
                 break;
             case 2:
+                Plant1.gameObject.SetActive(true);
+                Plant2.gameObject.SetActive(false);
+                CharacterInt--;
                 break;
             case 3:
+                Plant3.gameObject.SetActive(false);
+                Plant2.gameObject.SetActive(true);
+                CharacterInt--;                
                 break;
             default:
                 break;
@@ -74,9 +82,14 @@ public class Plant_Selector : MonoBehaviour
 
     private void ResetPlantInt()
     {
-        if (CharacterInt >= 4)
+        if (CharacterInt >= 3)
         {
             CharacterInt = 1;
+
+        }
+        else
+        {
+            CharacterInt = 3;
 
         }
 
