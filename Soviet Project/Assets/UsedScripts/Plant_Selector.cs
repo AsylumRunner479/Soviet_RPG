@@ -14,6 +14,12 @@ public class Plant_Selector : MonoBehaviour
    private Vector3 PlantPosition;
    private Vector3 Offscreenplant;
 
+    private int CharacterInt = 1;
+
+    //plan is too hit next character, 
+    //current character is gameobject.set active false 
+    //and next character is enabled
+
 
     private void Awake()
     {
@@ -23,13 +29,56 @@ public class Plant_Selector : MonoBehaviour
 
     public void NextPlant()
     {
+        switch (CharacterInt)
+        {
+            case 1:
+                Plant1.gameObject.SetActive(false);
+                Plant2.gameObject.SetActive(true);
+                CharacterInt++;
+                break;
+            case 2:
+                Plant2.gameObject.SetActive(false);
+                Plant3.gameObject.SetActive(true);
+                CharacterInt++;
+                break;
+            case 3:
+                Plant3.gameObject.SetActive(false);
+                Plant1.gameObject.SetActive(true);
+                CharacterInt++;
+                ResetPlantInt();
+                break;
+            default:
+                ResetPlantInt();
+                break;
+        }
         
 
     }
 
     public void PreviousPlant()
     {
+        switch (CharacterInt)
+        {
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            default:
+                break;
+        }
 
+    }
+
+
+    private void ResetPlantInt()
+    {
+        if (CharacterInt >= 4)
+        {
+            CharacterInt = 1;
+
+        }
 
     }
 
