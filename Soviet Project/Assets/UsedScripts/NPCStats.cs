@@ -7,10 +7,14 @@ public class NPCStats : MonoBehaviour
     public RandomNumber random;
     public int Charisma, Compassion, Tenacity, Greed, Cunning, Intuition;
     public GameObject charisma, compassion, tenacity, greed, cunning, intuition;
+    public GameObject StatDisplay;
+    public GameObject NPCDisplay;
+    
     // Start is called before the first frame update
     void Start()
     {
         CreateNPC();
+        
     }
     public void CreateNPC()
     {
@@ -32,5 +36,20 @@ public class NPCStats : MonoBehaviour
     void Update()
     {
         
+    }
+    public void DisplayStats(bool Display)
+    {
+        if (Display == true)
+        {
+            StatDisplay.SetActive(true);
+            NPCDisplay.SetActive(false);
+            Display = false;
+        }
+        if (Display == false)
+        {
+            StatDisplay.SetActive(false);
+            NPCDisplay.SetActive(true);
+            Display = true;
+        }
     }
 }

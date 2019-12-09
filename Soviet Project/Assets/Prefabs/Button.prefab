@@ -119,7 +119,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7449275854170516879}
-        m_MethodName: CreateNPC
+        m_MethodName: DisplayStats
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -143,13 +143,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7802d69b00d94c54ca4ee178e5a190b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  random: {fileID: 6437603269835133125}
+  random: {fileID: 0}
   Charisma: 0
   Compassion: 0
   Tenacity: 0
   Greed: 0
   Cunning: 0
   Intuition: 0
+  charisma: {fileID: 0}
+  compassion: {fileID: 0}
+  tenacity: {fileID: 0}
+  greed: {fileID: 0}
+  cunning: {fileID: 0}
+  intuition: {fileID: 0}
+  StatDisplay: {fileID: 0}
+  NPCDisplay: {fileID: 0}
+  Display: 0
 --- !u!114 &6437603269835133125
 MonoBehaviour:
   m_ObjectHideFlags: 0
