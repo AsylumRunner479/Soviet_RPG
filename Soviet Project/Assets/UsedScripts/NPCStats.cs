@@ -43,13 +43,13 @@ public class NPCStats : MonoBehaviour
         {
             StatDisplay.SetActive(true);
             NPCDisplay.SetActive(false);
-            Display = false;
+         
         }
         if (Display == false)
         {
             StatDisplay.SetActive(false);
             NPCDisplay.SetActive(true);
-            Display = true;
+            
         }
     }
 }
