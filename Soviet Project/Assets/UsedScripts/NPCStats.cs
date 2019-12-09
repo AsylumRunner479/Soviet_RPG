@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NPCStats : MonoBehaviour
 {
     public RandomNumber random;
     public int Charisma, Compassion, Tenacity, Greed, Cunning, Intuition;
-    public GameObject charisma, compassion, tenacity, greed, cunning, intuition;
+    public Slider charisma, compassion, tenacity, greed, cunning, intuition;
     public GameObject StatDisplay;
     public GameObject NPCDisplay;
     
@@ -43,7 +44,12 @@ public class NPCStats : MonoBehaviour
         {
             StatDisplay.SetActive(true);
             NPCDisplay.SetActive(false);
-         
+            compassion.value = Compassion;
+            charisma.value = Charisma;
+            tenacity.value = Tenacity;
+            greed.value = Greed;
+            cunning.value = Cunning;
+            intuition.value = Intuition;
         }
         if (Display == false)
         {
