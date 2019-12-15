@@ -6,16 +6,39 @@ using UnityEngine.UI;
 public class NPCStats : MonoBehaviour
 {
     public RandomNumber random;
-    public int Charisma, Compassion, Tenacity, Greed, Cunning, Intuition;
-    public Slider charisma, compassion, tenacity, greed, cunning, intuition;
+    public int Charisma, Compassion, Tenacity, Greed, Cunning, Intuition, Hostility;
+    public Slider charisma, compassion, tenacity, greed, cunning, intuition, hostility;
     public GameObject StatDisplay;
     public GameObject NPCDisplay;
+    public Button Drink, Bribe, Promote, Rumour, Share, Execute;
     
     // Start is called before the first frame update
     void Start()
     {
         CreateNPC();
         
+    }
+    public void DrinkWith()
+    {
+        hostility.value -= 20;
+        tenacity.value -= 20;
+    }
+    public void OfferBribe()
+    {
+        hostility.value -= Mathf.Clamp(greed.value / 5, 0, 20);
+
+    }
+    public void PromoteRank()
+    {
+
+    }
+    public void SpreadRumour()
+    {
+
+    }
+    public void ShareKnowledge()
+    {
+
     }
     public void CreateNPC()
     {
@@ -31,6 +54,8 @@ public class NPCStats : MonoBehaviour
         Cunning = random.number100;
         random.Random10();
         Intuition = random.number100;
+        random.Random10();
+        Hostility = random.number100;
     }
 
     // Update is called once per frame
@@ -50,12 +75,28 @@ public class NPCStats : MonoBehaviour
             greed.value = Greed;
             cunning.value = Cunning;
             intuition.value = Intuition;
+            hostility.value = Hostility;
         }
         if (Display == false)
         {
             StatDisplay.SetActive(false);
             NPCDisplay.SetActive(true);
             
+        }
+    }
+    public void DisplayInteract(bool Interact)
+    {
+        if (Interact == true)
+        {
+            StatDisplay.SetActive(false);
+            NPCDisplay.SetActive(false);
+            
+        }
+        if (Interact == false)
+        {
+            StatDisplay.SetActive(false);
+            NPCDisplay.SetActive(false);
+
         }
     }
 }
