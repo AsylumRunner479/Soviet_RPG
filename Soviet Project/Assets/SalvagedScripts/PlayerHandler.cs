@@ -14,7 +14,7 @@ public class PlayerHandler : MonoBehaviour
    
     
     
-    public Slider healthBar;
+    public Slider suspicion;
    
     [Header("Damage Effect Variables")]
     
@@ -53,7 +53,7 @@ public class PlayerHandler : MonoBehaviour
         {
             Death();
         }
-        if (healthBar.value != Mathf.Clamp01(curHealth/maxHealth))
+        if (suspicion.value != Mathf.Clamp01(curHealth/maxHealth))
         {
             LoseHealth();
         }
@@ -79,7 +79,7 @@ public class PlayerHandler : MonoBehaviour
     void LoseHealth()
     {
         curHealth = Mathf.Clamp(curHealth, 0, maxHealth);
-        healthBar.value = Mathf.Clamp01(curHealth / maxHealth);
+        suspicion.value = Mathf.Clamp01(curHealth / maxHealth);
 
     }
    
