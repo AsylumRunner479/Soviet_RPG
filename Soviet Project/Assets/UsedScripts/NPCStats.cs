@@ -162,9 +162,9 @@ public class NPCStats : MonoBehaviour
             intuition.value = Intuition;
             hostility.value = Hostility;
             displayname.text = Name.text;
-            displayadvantage.text = Advantage.text;
-            displayadvantage1.text = Advantage1.text;
-            displayadvantage2.text = Advantage2.text;
+            //displayadvantage.text = Advantage.text;
+            //displayadvantage1.text = Advantage1.text;
+            //displayadvantage2.text = Advantage2.text;
         }
         if (Display == false)
         {
