@@ -3310,6 +3310,8 @@ GameObject:
   - component: {fileID: 817083067}
   - component: {fileID: 817083066}
   - component: {fileID: 817083065}
+  - component: {fileID: 817083069}
+  - component: {fileID: 817083068}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -3377,7 +3379,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1827213971}
+      - m_Target: {fileID: 817083069}
         m_MethodName: Generate
         m_Mode: 1
         m_Arguments:
@@ -3427,6 +3429,66 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 817083063}
   m_CullTransparentMesh: 0
+--- !u!114 &817083068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817083063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7802d69b00d94c54ca4ee178e5a190b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  random: {fileID: 808963103}
+  Charisma: 0
+  Compassion: 0
+  Tenacity: 0
+  Greed: 0
+  Cunning: 0
+  Intuition: 0
+  Hostility: 0
+  charisma: {fileID: 658110281}
+  compassion: {fileID: 975047777}
+  tenacity: {fileID: 2020847074}
+  greed: {fileID: 494036818}
+  cunning: {fileID: 918686895}
+  intuition: {fileID: 1440248376}
+  hostility: {fileID: 2022735717}
+  Name: {fileID: 1621087093}
+  displayname: {fileID: 1621087093}
+  Advantage:
+  - 
+  - 
+  - 
+  displayadvantage:
+  - 
+  - 
+  - 
+  StatDisplay: {fileID: 1588736311}
+  NPCDisplay: {fileID: 2048934141}
+  Drink: {fileID: 1617936745}
+  Bribe: {fileID: 927157283}
+  Promote: {fileID: 2012358743}
+  Rumour: {fileID: 1975588894}
+  Share: {fileID: 1955843509}
+  Execute: {fileID: 2061684513}
+--- !u!114 &817083069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817083063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3ed6fe17425c2745936267e4d1e2caf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Grid: {fileID: 1712653734}
+  NPC: {fileID: 7449275854170516912, guid: 888add30a2d10cc44ac477c353074b99, type: 3}
+  stats: {fileID: 0}
 --- !u!1 &874642371
 GameObject:
   m_ObjectHideFlags: 0
@@ -6607,7 +6669,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3ed6fe17425c2745936267e4d1e2caf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Grid: {fileID: 1712653734}
   NPC: {fileID: 2139357022}
+  stats: {fileID: 801915928}
 --- !u!1 &1716049840
 GameObject:
   m_ObjectHideFlags: 0
@@ -6978,7 +7042,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1827213972}
-  - component: {fileID: 1827213971}
   m_Layer: 0
   m_Name: NPCGenerator
   m_TagString: Untagged
@@ -6986,19 +7049,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1827213971
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1827213970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3ed6fe17425c2745936267e4d1e2caf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NPC: {fileID: 7449275854170516912, guid: 888add30a2d10cc44ac477c353074b99, type: 3}
 --- !u!4 &1827213972
 Transform:
   m_ObjectHideFlags: 0
