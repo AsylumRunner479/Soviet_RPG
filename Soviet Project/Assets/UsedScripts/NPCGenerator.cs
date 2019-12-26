@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class NPCGenerator : MonoBehaviour
 {
-    public GameObject Grid;
-    public GameObject NPC;
+    public Transform Grid;
+    public Transform NPC;
     public NPCStats stats;
     // Start is called before the first frame update
     void Start()
@@ -14,9 +14,10 @@ public class NPCGenerator : MonoBehaviour
     }
     public void Generate()
     {
-        Instantiate(NPC);
-       
-        NPC.transform.SetParent(Grid.transform);
+        Transform clone = Instantiate(NPC, Grid);
+        
+        clone.transform.SetParent(Grid.transform);
+        
         stats.CreateNPC();
     }
     // Update is called once per frame
