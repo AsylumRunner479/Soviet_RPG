@@ -28,7 +28,7 @@ public class RandomNumber : MonoBehaviour
         number8 = Random.Range(0, 10);
         number9 = Random.Range(0, 10);
         number100 = number0 + number1 + number2 + number3 + number4 + number5 + number6 + number7 + number8 + number9;
-        Debug.Log(number100);
+        
     }
     public void Random1010()
     {

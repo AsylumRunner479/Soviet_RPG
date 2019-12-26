@@ -7,9 +7,9 @@ public class NPCStats : MonoBehaviour
 {
     public RandomNumber random;
     public int Charisma, Compassion, Tenacity, Greed, Cunning, Intuition, Hostility;
-    private Slider charisma, compassion, tenacity, greed, cunning, intuition, hostility;
+    public Slider charisma, compassion, tenacity, greed, cunning, intuition, hostility;
     public Text Name, displayname;
-    public string Advantage, displayadvantage;
+    public string[] Advantage, displayadvantage;
     //public Text Advantage1, displayadvantage1;
     //public Text Advantage2, displayadvantage2;
     public GameObject StatDisplay;
@@ -71,66 +71,67 @@ public class NPCStats : MonoBehaviour
         Intuition = random.number100;
         random.Random10();
         Hostility = random.number100;
-        Name.text = names[Random.Range(0, names.Length)] + "" + lastNames[Random.Range(0, lastNames.Length)];
+        Name.text = names[Random.Range(0, names.Length)] + " "  + lastNames[Random.Range(0, lastNames.Length)];
 
         for (int i = 0; i < 3; i++)
         {
-            Advantage = advantage[Random.Range(0, advantage.Length)];
-            if (Advantage == "Charming")
+            Advantage[i] = advantage[Random.Range(0, advantage.Length)];
+            Debug.Log(Advantage[i]);
+            if (Advantage[i] == "Charming")
             {
-                Charisma += 30;
+                Charisma += 20;
             }
-            else if (Advantage == "Ugly")
+            else if (Advantage[i] == "Ugly")
             {
-                Charisma -= 30;
+                Charisma -= 20;
             }
-            else if (Advantage == "Nice")
+            else if (Advantage[i] == "Nice")
             {
-                Compassion += 30;
+                Compassion += 20;
             }
-            else if (Advantage == "Arsehole")
+            else if (Advantage[i] == "Arsehole")
             {
-                Compassion -= 30;
+                Compassion -= 20;
             }
-            else if (Advantage == "Tough")
+            else if (Advantage[i] == "Tough")
             {
-                Tenacity += 30;
+                Tenacity += 20;
             }
-            else if (Advantage == "Wimp")
+            else if (Advantage[i] == "Wimp")
             {
-                Tenacity -= 30;
+                Tenacity -= 20;
             }
-            else if (Advantage == "Corrupt")
+            else if (Advantage[i] == "Corrupt")
             {
-                Greed += 30;
+                Greed += 20;
             }
-            else if (Advantage == "Honest")
+            else if (Advantage[i] == "Honest")
             {
-                Greed -= 30;
+                Greed -= 20;
             }
-            else if (Advantage == "Smart")
+            else if (Advantage[i] == "Smart")
             {
-                Cunning += 30;
+                Cunning += 20;
             }
-            else if (Advantage == "Moron")
+            else if (Advantage[i] == "Moron")
             {
-                Cunning -= 30;
+                Cunning -= 20;
             }
-            else if (Advantage == "Perceptive")
+            else if (Advantage[i] == "Perceptive")
             {
-                Intuition += 30;
+                Intuition += 20;
             }
-            else if (Advantage == "Naive")
+            else if (Advantage[i] == "Naive")
             {
-                Intuition -= 30;
+                Intuition -= 20;
             }
-            else if (Advantage == "Hateful")
+            else if (Advantage[i] == "Hateful")
             {
-                Hostility += 30;
+                Hostility += 20;
             }
-            else if (Advantage == "Lovely")
+            else if (Advantage[i] == "Lovely")
             {
-                Hostility -= 30;
+                Hostility -= 20;
             }
             else
             {
@@ -138,9 +139,7 @@ public class NPCStats : MonoBehaviour
             }
 
         }
-        //Advantage.text = advantage[Random.Range(0, advantage.Length)];
-        //Advantage1.text = advantage[Random.Range(0, advantage.Length)];
-        //Advantage2.text = advantage[Random.Range(0, advantage.Length)];
+        
     }
 
     // Update is called once per frame
