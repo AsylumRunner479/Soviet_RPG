@@ -3,7 +3,21 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - charisma
+  - compassion
+  - tenacity
+  - greed
+  - cunning
+  - intuition
+  - hostility
+  - name
+  - drink
+  - bribe
+  - promote
+  - rumour
+  - knowledge
+  - fire
   layers:
   - Default
   - TransparentFX

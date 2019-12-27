@@ -57,6 +57,7 @@ public class NPCStats : MonoBehaviour
     }
     public void CreateNPC()
     {
+        //charisma = GameObject.FindGameObjectWithTag("charisma");
         random.Random10();
         Charisma = random.number100;
         random.Random10();

@@ -1616,7 +1616,7 @@ GameObject:
   - component: {fileID: 494036818}
   m_Layer: 5
   m_Name: Slider (4)
-  m_TagString: Untagged
+  m_TagString: greed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1862,7 +1862,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &517040683
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2239,7 +2239,7 @@ GameObject:
   - component: {fileID: 658110281}
   m_Layer: 5
   m_Name: Slider (3)
-  m_TagString: Untagged
+  m_TagString: charisma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3654,7 +3654,7 @@ GameObject:
   - component: {fileID: 918686895}
   m_Layer: 5
   m_Name: Slider
-  m_TagString: Untagged
+  m_TagString: cunning
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3744,7 +3744,7 @@ GameObject:
   - component: {fileID: 927157283}
   m_Layer: 5
   m_Name: Bribe
-  m_TagString: Untagged
+  m_TagString: bribe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4245,7 +4245,7 @@ GameObject:
   - component: {fileID: 975047777}
   m_Layer: 5
   m_Name: Slider (2)
-  m_TagString: Untagged
+  m_TagString: compassion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5067,7 +5067,7 @@ GameObject:
   - component: {fileID: 1301247687}
   m_Layer: 5
   m_Name: Greed
-  m_TagString: Untagged
+  m_TagString: name
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5420,7 +5420,7 @@ GameObject:
   - component: {fileID: 1440248376}
   m_Layer: 5
   m_Name: Slider (1)
-  m_TagString: Untagged
+  m_TagString: intuition
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6259,7 +6259,7 @@ GameObject:
   - component: {fileID: 1617936745}
   m_Layer: 5
   m_Name: Drink
-  m_TagString: Untagged
+  m_TagString: drink
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7403,7 +7403,7 @@ GameObject:
   - component: {fileID: 1955843509}
   m_Layer: 5
   m_Name: ShareKnowledge
-  m_TagString: Untagged
+  m_TagString: knowledge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7521,7 +7521,7 @@ GameObject:
   - component: {fileID: 1975588894}
   m_Layer: 5
   m_Name: SpreadRumour
-  m_TagString: Untagged
+  m_TagString: rumour
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7754,7 +7754,7 @@ GameObject:
   - component: {fileID: 2012358743}
   m_Layer: 5
   m_Name: Promote
-  m_TagString: Untagged
+  m_TagString: promote
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7870,7 +7870,7 @@ GameObject:
   - component: {fileID: 2020847074}
   m_Layer: 5
   m_Name: Slider (5)
-  m_TagString: Untagged
+  m_TagString: tenacity
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7958,7 +7958,7 @@ GameObject:
   - component: {fileID: 2022735717}
   m_Layer: 5
   m_Name: Slider (6)
-  m_TagString: Untagged
+  m_TagString: hostility
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8165,7 +8165,7 @@ GameObject:
   - component: {fileID: 2061684513}
   m_Layer: 5
   m_Name: Fire
-  m_TagString: Untagged
+  m_TagString: fire
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
