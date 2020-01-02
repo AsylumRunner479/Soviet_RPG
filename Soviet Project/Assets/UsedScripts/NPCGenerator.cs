@@ -18,7 +18,7 @@ public class NPCGenerator : MonoBehaviour
         
         clone.transform.SetParent(Grid.transform);
         
-        stats.CreateNPC();
+       
     }
     // Update is called once per frame
     void Update()

@@ -23,6 +23,7 @@ public class DayHandler : MonoBehaviour
         BreakDay,
     }
     public int Day;
+    public static int CurActionPoints, MaxActionPoints;
     public Text WorkText;
     public Text WeekText;
     public Text DayText;
@@ -34,19 +35,22 @@ public class DayHandler : MonoBehaviour
         daywork = WorkDays.Day1;
         dayweek = WeekDays.Monday;
         Day = 1;
+        MaxActionPoints = 3;
+        CurActionPoints = MaxActionPoints;
     }
     public void ChangeDay()
     {
         ChangeWeek();
         ChangeWork();
         Day += 1;
+        CurActionPoints = MaxActionPoints;
     }
     // Update is called once per frame
     void Update()
     {
         WorkText.text = "" + daywork;
         WeekText.text = "" + dayweek;
-        DayText.text = "Day" + "" + Day;
+        DayText.text = "Action : " + CurActionPoints;
     }
     private void ChangeWork()
     {

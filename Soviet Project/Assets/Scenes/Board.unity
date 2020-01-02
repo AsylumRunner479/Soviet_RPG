@@ -1862,7 +1862,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &517040683
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3230,6 +3230,7 @@ MonoBehaviour:
   Rumour: {fileID: 0}
   Share: {fileID: 0}
   Execute: {fileID: 0}
+  self: {fileID: 0}
 --- !u!4 &801915929
 Transform:
   m_ObjectHideFlags: 0
@@ -3449,13 +3450,13 @@ MonoBehaviour:
   Cunning: 0
   Intuition: 0
   Hostility: 0
-  charisma: {fileID: 658110281}
-  compassion: {fileID: 975047777}
-  tenacity: {fileID: 2020847074}
-  greed: {fileID: 494036818}
-  cunning: {fileID: 918686895}
-  intuition: {fileID: 1440248376}
-  hostility: {fileID: 2022735717}
+  charisma: {fileID: 0}
+  compassion: {fileID: 0}
+  tenacity: {fileID: 0}
+  greed: {fileID: 0}
+  cunning: {fileID: 0}
+  intuition: {fileID: 0}
+  hostility: {fileID: 0}
   Name: {fileID: 1621087093}
   displayname: {fileID: 1621087093}
   Advantage:
@@ -3474,6 +3475,7 @@ MonoBehaviour:
   Rumour: {fileID: 1975588894}
   Share: {fileID: 1955843509}
   Execute: {fileID: 2061684513}
+  self: {fileID: 0}
 --- !u!114 &817083069
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -15,7 +15,7 @@ public class NPCStats : MonoBehaviour
     public GameObject StatDisplay;
     public GameObject NPCDisplay;
     public Button Drink, Bribe, Promote, Rumour, Share, Execute;
-
+    public GameObject self;
     private string[] names = new string[] { "Albert", "Bogdan", "Dmitry", "Eduard", "Fedir", "German", "Igor", "Julij", "Konstantin", "Lavrentii", "Maxim", "Naum", "Osip", "Peter", "Roman", "Tit", "Vlad", "Yuri", "Vyacheslav", "Goga", "Alexei", "Viktor", "Misha", "Innokentiy", "Stefan", "Stanislav", "Foma", "Ruslan", "Taras", "Mitrofan", "Erik", "Spartak", "Modest", "Garry", "Nikita", "Boris", "Dobrushin", "Trofim", "Anton", "Mikhail", "Abram", "Gedeon", "Dorofey", "Savin", "Isodor", "Leonid", "Gleb", "Valentin", "David", "Daniil", "Ippolit", "Kirill", "Lazar", "Filipp", "Marlen", "Nestor", "Robert", "Arkady", "Pasha", "Valeriy", "Rolan", "Makariy", "Yulian", "Gennady", "Sergei", "Fanasiy", "Khan", "Semyon", "Yakov", "Rurik", "Faddei", "Yefim", "Nikolay", "Sasha", "Vladimir", "Alexander", "Stas", "Ipatiy", "Kolmogorov", "Vitaliy", "Vladislav", "Artyom", "Yana", "Olga", "Fedor", "Vasily", "Ivanovich", "Leo", "Pierre", "Anna", "Natasha", "Andrei" };
     private string[] advantage = new string[] { "Charming", "Nice", "Tough", "Corrupt", "Smart", "Perceptive", "Hateful", "Ugly", "Arsehole", "Wimp", "Honest", "Moron", "Naive", "Lovely" };
     private string[] lastNames = new string[] { "Isayev", "Tikhonov", "Chapayev", "Petka", "Anka", "Furmanov", "Budyonny", "Caesar", "Rzhevsky", "Tolstoy", "Bezukhov", "Blonsky", "Romanov", "Pavlovna", "Rostova", "Bolkonsky", "Kuragin", "Vidor", "Bondarchuk", "Levi", "Livinov", "Solomin", "Aksyonov", "Kalashnikov", "Gorbachev", "Smirnov", "Chernov", "Putin", "Brezhnev", "Pushkin", "Lipatov", "Khruschev", "Yeltsin", "Medvedev", "Anatolievych", "Vladimirovich" };
@@ -28,32 +28,35 @@ public class NPCStats : MonoBehaviour
     {
         CreateNPC();
         Debug.Log(GetRandomName());
+        
     }
     public void Fire()
         {
-        CreateNPC();
-        }
+        Destroy(self);
+        DayHandler.CurActionPoints -= 1;
+    }
     public void DrinkWith()
     {
-        hostility.value -= 20;
-        tenacity.value -= 20;
+        hostility.GetComponent<Slider>().value -= 20;
+        tenacity.GetComponent<Slider>().value -= 20;
+        DayHandler.CurActionPoints -= 1;
     }
     public void OfferBribe()
     {
-        hostility.value -= Mathf.Clamp(greed.value / 5, 0, 20);
-
+        hostility.GetComponent<Slider>().value -= Mathf.Clamp(greed.GetComponent<Slider>().value / 5, 0, 20);
+        DayHandler.CurActionPoints -= 1;
     }
     public void PromoteRank()
     {
-
+        DayHandler.CurActionPoints -= 1;
     }
     public void SpreadRumour()
     {
-
+        DayHandler.CurActionPoints -= 1;
     }
     public void ShareKnowledge()
     {
-
+        DayHandler.CurActionPoints -= 1;
     }
     public void CreateNPC()
     {
@@ -73,6 +76,14 @@ public class NPCStats : MonoBehaviour
         random.Random10();
         Hostility = random.number100;
         Name.text = names[Random.Range(0, names.Length)] + " "  + lastNames[Random.Range(0, lastNames.Length)];
+        compassion = GameObject.FindGameObjectWithTag("compassion");
+        charisma = GameObject.FindGameObjectWithTag("charisma");
+        tenacity = GameObject.FindGameObjectWithTag("tenacity");
+        greed = GameObject.FindGameObjectWithTag("greed");
+        cunning = GameObject.FindGameObjectWithTag("cunning");
+        intuition = GameObject.FindGameObjectWithTag("intuition");
+        hostility = GameObject.FindGameObjectWithTag("hostility");
+        
 
         for (int i = 0; i < 3; i++)
         {
@@ -154,14 +165,12 @@ public class NPCStats : MonoBehaviour
         {
             StatDisplay.SetActive(true);
             NPCDisplay.SetActive(false);
-            
-            compassion.value = Compassion;
-            charisma.value = Charisma;
-            tenacity.value = Tenacity;
-            greed.value = Greed;
-            cunning.value = Cunning;
-            intuition.value = Intuition;
-            hostility.value = Hostility;
+            charisma.GetComponent<Slider>().value = Charisma;
+            tenacity.GetComponent<Slider>().value = Tenacity;
+            greed.GetComponent<Slider>().value = Greed;
+            cunning.GetComponent<Slider>().value = Cunning;
+            intuition.GetComponent<Slider>().value = Intuition;
+            hostility.GetComponent<Slider>().value = Hostility;
             displayname.text = Name.text;
             //displayadvantage.text = Advantage.text;
             //displayadvantage1.text = Advantage1.text;
