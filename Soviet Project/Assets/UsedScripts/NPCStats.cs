@@ -7,7 +7,7 @@ public class NPCStats : MonoBehaviour
 {
     public RandomNumber random;
     public int Charisma, Compassion, Tenacity, Greed, Cunning, Intuition, Hostility;
-    public Slider charisma, compassion, tenacity, greed, cunning, intuition, hostility;
+    public GameObject charisma, compassion, tenacity, greed, cunning, intuition, hostility;
     public Text Name, displayname;
     public string[] Advantage, displayadvantage;
     //public Text Advantage1, displayadvantage1;
@@ -154,6 +154,7 @@ public class NPCStats : MonoBehaviour
         {
             StatDisplay.SetActive(true);
             NPCDisplay.SetActive(false);
+            
             compassion.value = Compassion;
             charisma.value = Charisma;
             tenacity.value = Tenacity;
